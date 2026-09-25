@@ -70,7 +70,9 @@ export default function Home() {
 
             <h2 className="text-5xl font-black leading-tight md:text-7xl">
               Discover your next
-              <span className="block text-red-500">favorite movie.</span>
+              <span className="block text-red-500">
+                favorite movie.
+              </span>
             </h2>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-400">
@@ -98,7 +100,10 @@ export default function Home() {
             <p className="text-sm font-semibold uppercase tracking-widest text-red-500">
               Trending
             </p>
-            <h3 className="mt-2 text-3xl font-bold">Popular Movies</h3>
+
+            <h3 className="mt-2 text-3xl font-bold">
+              Popular Movies
+            </h3>
           </div>
 
           <a href="#" className="text-sm text-gray-400 hover:text-white">
@@ -112,10 +117,16 @@ export default function Home() {
               key={movie.title}
               className="group overflow-hidden rounded-2xl border border-white/10 bg-[#121217] transition hover:-translate-y-1 hover:border-red-500/50"
             >
-              
+              <img
+                src={movie.image}
+                alt={movie.title}
+                className="h-[360px] w-full object-cover transition duration-300 group-hover:scale-105"
+              />
 
               <div className="p-4">
-                <h4 className="truncate text-lg font-bold">{movie.title}</h4>
+                <h4 className="truncate text-lg font-bold">
+                  {movie.title}
+                </h4>
 
                 <p className="mt-1 text-sm text-gray-500">
                   {movie.year}
